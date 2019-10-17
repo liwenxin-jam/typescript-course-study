@@ -1,3 +1,1 @@
-let num: number = 123
-
-document.title = 'typescript study'
+import './example/basic-type.ts'
