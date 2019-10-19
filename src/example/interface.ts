@@ -52,7 +52,7 @@ let arr: ArrInter = [1, 'a']
 // console.log(getVegetables(vegetableInfo))
 
 type AddFunc = (num1: number, num2: number) => number
-const add: AddFunc = (n1, n2) => n1 + n2
+// const add: AddFunc = (n1, n2) => n1 + n2
 
 // interface RoleDic {
 //     [id: number]: string
