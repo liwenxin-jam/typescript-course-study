@@ -6,6 +6,10 @@ let add: (x: number, y: number) => number
 add = (arg1: number, arg2: number): number => arg1 + arg2
 add = (arg1: number, arg2: number) => arg1 + arg2
 
+// interface定义，推荐用下边的类型别名方式
+// interface Add {
+//     (x: number, y: number): number
+// }
 // 类型别名
 type Add = (x: number, y: number) => number
 let addFunc
