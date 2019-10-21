@@ -19,7 +19,7 @@
 let prop = "name";
 const info = {
   // name: 'lison'
-  [`my${prop}is`]: "lison"
+  [`my${prop}is`]: "lison",
 };
 // console.log(info)
 
@@ -27,7 +27,7 @@ const s5 = Symbol("name");
 const info2 = {
   [s5]: "lison",
   age: 18,
-  sex: "man"
+  sex: "man",
 };
 // console.log(info2)
 info2[s5] = "haha";
@@ -68,7 +68,7 @@ const s8 = Symbol.for("lison");
 const obj1 = {
   [Symbol.hasInstance](otherObj) {
     console.log(otherObj);
-  }
+  },
 };
 // console.log({ a: 'a' } instanceof <any>obj1)
 
@@ -87,31 +87,31 @@ class C extends Array {
     // 创建原生对象的函数
     return Array;
   }
-  getName() {
+  public getName() {
     return "lison";
   }
 }
 const c = new C(1, 2, 3);
-const a = c.map(item => item + 1);
+const a = c.map((item) => item + 1);
 // console.log(a)
 // console.log(a instanceof C) // ts 认为是 false，es6 认为是 true
 // console.log(a instanceof Array)
 
 let obj3 = {
-  [Symbol.match](string) {
-    // console.log(string.length)
+  [Symbol.match](str) {
+    console.log(str.length)
   },
-  [Symbol.split](string) {
-    // console.log('split', string.length)
-  }
+  [Symbol.split](str) {
+    console.log('split', str.length)
+  },
 };
-"abcde".match(<RegExp>obj3);
+"abcde".match(obj3 as RegExp);
 
 // Symbol.replace
 // Symbol.search
 // Symbol.split
 
-"abcde".split(<any>obj3);
+"abcde".split(obj3 as any);
 
 // const arr = [1, 2, 3];
 // const interator = arr[Symbol.iterator](); // iterator可遍历数组，相当于generator
@@ -124,7 +124,7 @@ let obj3 = {
 let obj4: unknown = {
   [Symbol.toPrimitive](type) {
     console.log(type);
-  }
+  },
 };
 // const res = (obj4 as number)++  // number
 // const res = `abc${obj4}`  // node下 default 浏览器下 string
@@ -132,13 +132,13 @@ let obj4: unknown = {
 let obj5 = {
   get [Symbol.toStringTag]() {
     return "jam";
-  }
+  },
 };
 // console.log(obj5.toString())  // [object jam]
 
 const obj6 = {
   a: "a",
-  b: "b"
+  b: "b",
 };
 // 打印补过滤掉的原型方法，例如fill keys includes find findIndex等等
-console.log(Array.prototype[Symbol.unscopables]); 
+console.log(Array.prototype[Symbol.unscopables]);

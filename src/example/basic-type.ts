@@ -23,8 +23,8 @@ str = `数值是${num}`;
 let arr1: number[];
 arr1 = [5];
 // 写法2
-let arr2: Array<number>;
-let arr3: (string | number)[];
+let arr2: number[];
+let arr3: Array <string | number> ;
 arr3 = [1, "a"];
 
 // 元组类型
@@ -35,7 +35,7 @@ tuple = ["a", 1, false];
 enum Roles {
   SUPER_ADMIN,
   ADMIN = 4,
-  USER
+  USER,
 }
 // console.log(Roles.SUPER_ADMIN)
 // console.log(Roles[0])
@@ -75,7 +75,9 @@ const errorFunc = (message: string): never => {
   throw new Error(message);
 };
 const infiniteFunc = (): never => {
-  while (true) {}
+  while (true) {
+    console.log(1)
+  }
 };
 // let neverVariable = (() => {
 //     while(true){}
@@ -84,20 +86,21 @@ const infiniteFunc = (): never => {
 
 // object
 let obj = {
-  name: "lison"
+  name: "lison",
 };
 let obj2 = obj;
 obj2.name = "L";
 console.log(obj);
-function getObject(obj: object): void {
-  console.log(obj);
+
+function getObject(obj3: object): void {
+  console.log(obj3);
 }
 getObject(obj2);
 
 // 类型断言
 const getLength = (target: string | number): number => {
-  if ((<string>target).length || (target as string).length === 0) {
-    return (<string>target).length;
+  if ((target as string).length || (target as string).length === 0) {
+    return (target as string).length;
   } else {
     return target.toString().length;
   }
