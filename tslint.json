@@ -7,6 +7,11 @@
     "semicolon": [false],
     "interface-name": [true, "never-prefix"],
     "object-literal-sort-keys": [false],
+    // 一个文件最多定义一个 class，保证单一职责
+    "max-classes-per-file": false,  // [true, 2]
+    "no-empty": [false],
+    "variable-name": [false],
+    "no-empty-interface": [false],
     "no-console": false
   },
   "rulesDirectory": []
