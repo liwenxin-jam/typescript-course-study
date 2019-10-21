@@ -156,6 +156,7 @@ class A {
   protected name: string
 }
 interface I extends A {}
+// 仅仅implements实现接口，无法通过实例对象找到受保护的name。类型B不是A的派生类，需要自己先继承
 class B extends A implements I {
   public name: string
 }
