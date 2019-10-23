@@ -20,7 +20,9 @@
     // 禁止定义空的接口
     "no-empty-interface": [false],
     // 禁止使用 console
-    "no-console": false
+    "no-console": false,
+    // "interface-over-type-literal": [false],
+    "one-line": [false]
   },
   "rulesDirectory": []
 }
