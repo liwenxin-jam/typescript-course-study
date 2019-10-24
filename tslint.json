@@ -24,7 +24,13 @@
     // 优先使用接口而不是字面类型
     // "interface-over-type-literal": [false],
     // if 后的 { 禁止换行
-    "one-line": [false]
+    "one-line": [false],
+    // 禁止变量名与上层作用域内的定义过的变量重复
+    "no-shadowed-variable": [false],
+    // for in 内部必须有 hasOwnProperty
+    "forin": [false],
+    // 禁用特定的类型
+    "ban-types": [false]
   },
   "rulesDirectory": []
 }
