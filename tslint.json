@@ -12,7 +12,7 @@
     // 对象字面量必须按 key 排序
     "object-literal-sort-keys": [false],
     // 一个文件最多定义一个 class，保证单一职责
-    "max-classes-per-file": false,  // [true, 2]
+    "max-classes-per-file": false, // [true, 2]
     // 禁止出现空代码块，允许 catch 是空代码块
     "no-empty": [false],
     // 限制变量命名规则
@@ -24,7 +24,9 @@
     // 优先使用接口而不是字面类型
     // "interface-over-type-literal": [false],
     // if 后的 { 禁止换行
-    "one-line": [false]
+    "one-line": [false],
+    "no-namespace": [false],
+    "no-reference": [false]
   },
   "rulesDirectory": []
 }
