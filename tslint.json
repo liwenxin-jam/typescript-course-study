@@ -12,7 +12,7 @@
     // 对象字面量必须按 key 排序
     "object-literal-sort-keys": [false],
     // 一个文件最多定义一个 class，保证单一职责
-    "max-classes-per-file": false,  // [true, 2]
+    "max-classes-per-file": false, // [true, 2]
     // 禁止出现空代码块，允许 catch 是空代码块
     "no-empty": [false],
     // 限制变量命名规则
@@ -30,7 +30,11 @@
     // for in 内部必须有 hasOwnProperty
     "forin": [false],
     // 禁用特定的类型
-    "ban-types": [false]
+    "ban-types": [false],
+    // 禁止使用 namespace 来定义命名空间
+    "no-namespace": [false],
+    // 禁止使用三斜线引入模块 /// <reference path="foo" />
+    "no-reference": [false]
   },
   "rulesDirectory": []
 }
