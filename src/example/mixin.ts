@@ -10,9 +10,11 @@ let Aa: ObjectA = {
 let Bb: ObjectB = {
   b: 'b',
 }
+// 对象的混入合并
 let AB: ObjectA & ObjectB = Object.assign(Aa, Bb)
 // console.log(AB)
 
+// 类的混入合并
 class ClassAa {
   public isA: boolean
   public funcA() {}
