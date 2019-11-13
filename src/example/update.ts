@@ -12,7 +12,7 @@
 //   })
 // }
 // getIndexPromise(false).then((res) => {
-//   console.log(res) 
+//   console.log(res)
 // }).catch((error) => {
 //   console.log(error)
 // })
@@ -74,7 +74,7 @@ async function getRoleReq(user_id: number) {
     throw new Error(error)
   }
 }
-// loginReq({ user_name: 'lison', password: '123' }).then((res) => {
+// loginReq({ user_name: 'jam', password: '123' }).then((res) => {
 //   const { data: { user_id } } = res
 //   getRoleReq(user_id).then((res) => {
 //     const { data: { role } } = res
