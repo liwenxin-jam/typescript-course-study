@@ -64,5 +64,10 @@
     /* Experimental Options */
     "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
-  }
+  },
+  // 指定加载什么文件，默认就会引入所有.ts后缀结尾的文件
+  // "include": [
+  //   "./src/**/*.ts",
+  //   "./src/**/*.d.ts",
+  // ]
 }
