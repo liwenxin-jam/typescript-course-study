@@ -90,6 +90,7 @@ async function getTime(format: string) {
 //   console.log(res)
 // })
 
+// 当所有字段都允许为空，就是一个弱类型
 interface ObjIn {
   name ?: string
   age ?: number
@@ -101,6 +102,7 @@ let objIn = {
 function printInfo(info: ObjIn) {
   console.log(info)
 }
+// 一个强类型赋值给弱类型会报错，需要类型断言指明什么类型
 // printInfo(objIn as ObjIn)
 
 function mergeOptions < T, U extends string >(op1: T, op2: U) {
